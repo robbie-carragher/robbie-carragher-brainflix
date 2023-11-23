@@ -1,0 +1,96 @@
+@use "./../../../src/styles/partials/global" as *;
+@use "./../../../src/styles/partials/mixins" as *;
+@use "./../../../src/styles/partials/variables" as *;
+
+// * {
+//     -moz-box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+//   }
+  
+//   body {
+//     margin: 0;
+//     font-family: 'Roboto', sans-serif;
+//   }
+  
+//   a {
+//     padding: 0.625rem;
+//   }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    background: #ffffff;
+    z-index: 10;
+    align-items: center;
+    width: 87%;
+    margin: 0 auto;
+  
+    &__logo {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+    }
+  
+    &__links {
+      display: flex;
+      align-items: center;
+  
+      &--left {
+        padding-left: 1.25rem;
+        align-self: left;
+      }
+  
+      &--right {
+        padding-right: 1.25rem;
+        align-self: right;
+      }
+    }
+
+    &__avatar-preview {
+
+        width: 36px; 
+        height: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @include tablet {
+            width: 48px; 
+            height: 48px;   
+        }
+      }
+
+
+  }
+
+
+  .header__upload {
+    display: none;
+}
+
+.header__upload-btn {
+    display: flex;
+    background: pink;
+    color: #ffffff;
+}
+
+
+.search-container {
+    position: relative;
+}
+
+#search-box {
+    padding-left: 30px; 
+    background-image: url('./../../../src/assets/images/Icons/search.svg');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.header__links {
+    // display: grid;
+    // grid-template-columns: repeat(3, auto); /* Adjust based on your layout */
+    gap: 30px; /* Space between grid items */
+}
