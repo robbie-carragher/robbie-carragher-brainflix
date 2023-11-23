@@ -10,6 +10,7 @@ function App() {
   return (
     <>
   <Header/>
+  <h1>Video</h1>
     </>
   )
 }
