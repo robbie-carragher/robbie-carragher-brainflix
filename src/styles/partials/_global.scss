@@ -1,6 +1,6 @@
-@use "partials/mixins" as *;
-@use "partials/variables" as *;
-@use "partials/global";
+@use "./typography";
+@use "./variables" as *;
+@use "./mixins" as *;
 
 *,
 *::before,
