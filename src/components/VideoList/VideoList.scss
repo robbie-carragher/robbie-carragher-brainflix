@@ -1,0 +1,18 @@
+.list {
+   list-style-type: none;
+
+    &__item-image {
+        width:   20rem;   
+    }
+
+    &__link {
+        // display: flex;
+        align-items: center;
+    }
+}
+
+
+
+// .item__image {
+//  width:   2rem;
+// }

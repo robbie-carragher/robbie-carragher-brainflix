@@ -1,1 +1,12 @@
 @use "./styles/partials/global" as *;
+
+
+.video-gallery {
+    &__image {
+        width: 20rem;
+    }
+}
+
+.app-wrap {
+    display: flex;
+}
