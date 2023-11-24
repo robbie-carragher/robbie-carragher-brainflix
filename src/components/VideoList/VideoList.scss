@@ -1,0 +1,25 @@
+.list {
+   list-style-type: none;
+
+    &__item-image {
+        width:   20rem;   
+    }
+
+    &__link {
+        align-items: center;
+        text-decoration: none;
+    }
+
+    &__item {
+        padding: 0 1rem 0 0;
+    }
+
+    .active {
+        background: beige;
+        opacity: .5;
+    }
+}
+
+
+
+
