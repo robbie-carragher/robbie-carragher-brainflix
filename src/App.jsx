@@ -8,7 +8,7 @@ import VideoComponent from "./components/Video /Video";
 import "./App.scss";
 
 function App() {
-  const [selectedVideoData, setSelectedVideoData] = useState(null);
+  const [selectedVideoData, setSelectedVideoData] = useState(videosData[0]);
   console.log(selectedVideoData?.title);
 
   return (
