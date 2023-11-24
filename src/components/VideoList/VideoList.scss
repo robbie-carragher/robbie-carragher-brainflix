@@ -6,13 +6,20 @@
     }
 
     &__link {
-        // display: flex;
         align-items: center;
+        text-decoration: none;
+    }
+
+    &__item {
+        padding: 0 1rem 0 0;
+    }
+
+    .active {
+        background: beige;
+        opacity: .5;
     }
 }
 
 
 
-// .item__image {
-//  width:   2rem;
-// }
+

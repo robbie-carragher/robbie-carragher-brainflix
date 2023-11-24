@@ -1,12 +1,19 @@
- // Setter Function
+ 
  import "./VideoList.scss";
- function VideoList({videosData,setSelectedVideoData}) {
+
+
+ // Setter Function
+ export default function VideoList({videosData,setSelectedVideoData, selectedVideoData}) {
+  console.log("Video List is being rendered")
     return (
       <ul className="list">
       {videosData.map((videoData) => {
+       if (selectedVideoData) {
+        // console.log(`is ${videoData.title} the same as ${selectedVideoData.title} ? ${videoData === selectedVideoData}`)
+       }
         console.log(videoData);
         return (
-          <li key={videoData.id} className="list__item">
+          <li key={videoData.id} className={`list__item ${videoData === selectedVideoData ? "active" : ""}`}>
             <a className="list__link"
               href="#"
               onClick={(e) => {
@@ -26,4 +33,4 @@
     )
     }
 
-    export default VideoList;
+    // export default VideoList;

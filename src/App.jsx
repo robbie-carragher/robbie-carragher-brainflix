@@ -9,7 +9,7 @@ import "./App.scss";
 
 function App() {
   const [selectedVideoData, setSelectedVideoData] = useState(null);
-  console.log(selectedVideoData);
+  console.log(selectedVideoData?.title);
 
   return (
     <>
@@ -18,8 +18,9 @@ function App() {
 
       <div className="app-wrap">
         <VideoList
-          videosData={videosData}
+          videosData={videosData} 
           setSelectedVideoData={setSelectedVideoData}
+          selectedVideoData={selectedVideoData}
         />
 
         <section>
