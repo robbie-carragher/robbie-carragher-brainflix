@@ -1,11 +1,12 @@
 import "./Video.scss";
 
-import posterImage from "./../../assets/images/poster.png";
+// import posterImage from "./../../assets/images/poster.png";
 
-function VideoComponent() {
+function VideoComponent({selectedVideoData}) {
+  console.log("this is selected data" , selectedVideoData)
   return (
     <div>
-   <video className="full-width-video" controls poster={posterImage}></video>
+   <video className="full-width-video" controls poster={selectedVideoData.image}></video>
     </div>
   );
 }

@@ -7,7 +7,7 @@
   console.log("Video List is being rendered")
     return (
       <ul className="list">
-      {videosData.map((videoData) => {
+      {videosData.filter((videoData) => {return videoData.id !== selectedVideoData.id}).map((videoData) => {
        if (selectedVideoData) {
         // console.log(`is ${videoData.title} the same as ${selectedVideoData.title} ? ${videoData === selectedVideoData}`)
        }

@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Header logo="new logo" />
-      <VideoComponent />
+      <VideoComponent selectedVideoData={selectedVideoData}/>
 
       <div className="app-wrap">
         <VideoList
