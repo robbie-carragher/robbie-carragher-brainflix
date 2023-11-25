@@ -17,19 +17,29 @@ function App() {
       <VideoComponent selectedVideoData={selectedVideoData}/>
 
       <div className="app-wrap">
-        <VideoList
-          videosData={videosData} 
-          setSelectedVideoData={setSelectedVideoData}
-          selectedVideoData={selectedVideoData}
-        />
-
-        <section>
+      <section>
           {selectedVideoData ? (
             <VideoDetails videoData={selectedVideoData} />
           ) : (
             "No video Selected"
           )}
         </section>
+
+
+
+        <VideoList
+          videosData={videosData} 
+          setSelectedVideoData={setSelectedVideoData}
+          selectedVideoData={selectedVideoData}
+        />
+
+        {/* <section>
+          {selectedVideoData ? (
+            <VideoDetails videoData={selectedVideoData} />
+          ) : (
+            "No video Selected"
+          )}
+        </section> */}
       </div>
     </>
   );
