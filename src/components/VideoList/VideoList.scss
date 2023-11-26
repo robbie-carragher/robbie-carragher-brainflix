@@ -39,4 +39,8 @@
 
 // }
 
-
+.list__item-image {
+    width: 123px;
+    height: 68px;
+    object-fit: cover; /* Ensures the image covers the area, may crop some parts */
+}
