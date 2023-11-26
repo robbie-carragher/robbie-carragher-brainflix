@@ -15,8 +15,7 @@ export default function VideoDetails({ videoData }) {
   return (
     <section className="details">
       <h1>{title}</h1>
-      {/* <img src={image} alt="video" className="video-gallery__image" /> */}
-      <p className="details__description">{description}</p>
+      {/* <p className="details__description">{description}</p> */}
 
       <div className="details__inner-wrapper">
         <div className="details__left">
@@ -42,19 +41,7 @@ export default function VideoDetails({ videoData }) {
         </div>
       </div>
 
-      {/* Rest of your code */}
-
-      {/* <h2>More info</h2> */}
-
-      {/* {comments.length > 0 ? (
-        <ul>
-          {comments.map((comment) => {
-            return <li key={comment.id}>{comment.comment}</li>;
-          })}
-        </ul>
-      ) : (
-        "NO VIDEO DETAILS AVAIL"
-      )} */}
+      <p className="details__description">{description}</p>
     </section>
   );
 }
