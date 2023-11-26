@@ -39,10 +39,10 @@ export default function VideoList({
                   alt="video"
                   className="list__item-image"
                 />
-            <div className="list__details">
-            <h3 className="list__title">  {videoData.title}</h3>
-            <p className="list__channel"> {videoData.channel}</p>
-            </div>
+                <div className="list__details">
+                  <h3 className="list__title"> {videoData.title}</h3>
+                  <p className="list__channel"> {videoData.channel}</p>
+                </div>
               </a>
             </li>
           );
@@ -50,5 +50,3 @@ export default function VideoList({
     </ul>
   );
 }
-
-

@@ -1,58 +1,60 @@
+import "./VideoDetails.scss";
+
 export default function VideoDetails({ videoData }) {
-  const { title, image, description, comments } = videoData;
+  const { title, description, channel, timestamp } = videoData;
+
+  // Convert timestamp to date
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
+  };
 
   return (
-    <div className="video-gallery">
+    <section className="details">
       <h1>{title}</h1>
-      <img src={image} alt="video" className="video-gallery__image" />
-      <div>{description}</div>
-      <h2>More info</h2>
+      {/* <img src={image} alt="video" className="video-gallery__image" /> */}
+      <p className="details__description">{description}</p>
 
-      {comments.length > 0 ? (
+      <div className="details__inner-wrapper">
+        <div className="details__left">
+          <h2 className="details__title">By {channel}</h2>
+          <p className="details__data"> {formatDate(timestamp)}</p>
+        </div>
+
+        <div className="details__right">
+          <div className="details__inner-data-wrap">
+            <img
+              src="./../../../src/assets/images/Icons/views.svg"
+              alt="veiw icon"
+            />
+            <p className="details__data"> {videoData.views}</p>
+          </div>
+          <div className="details__inner-data-wrap">
+            <img
+              src="./../../../src/assets/images/Icons/likes.svg"
+              alt="Likes icon"
+            />
+            <p className="details__data"> {videoData.likes}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Rest of your code */}
+
+      {/* <h2>More info</h2> */}
+
+      {/* {comments.length > 0 ? (
         <ul>
           {comments.map((comment) => {
-            return (
-              <li key={comment.id}>
-                {/* {comment.comment ? "🧪" : "💧"} */}
-                {comment.comment}
-               <div> {comment.timestamp}</div>
-              </li>
-            );
+            return <li key={comment.id}>{comment.comment}</li>;
           })}
         </ul>
       ) : (
         "NO VIDEO DETAILS AVAIL"
-      )}
-    </div>
+      )} */}
+    </section>
   );
 }
-
-// export default function VideoDetails({ videoData }) {
-//     const { title, image, description, comments } = videoData;
-  
-//     // Check if comments is an array and has elements
-//     const hasComments = Array.isArray(comments) && comments.length > 0;
-  
-//     return (
-//       <div className="video-gallery">
-//         <h1>{title}</h1>
-//         <img src={image} alt="video" className="video-gallery__image" />
-//         <div>{description}</div>
-//         <h2>More info</h2>
-  
-//         {hasComments ? (
-//           <ul>
-//             {comments.map((comment) => (
-//               <li key={comment.id}>
-//                 {comment.name ? "🧪" : "💧"}
-//                 {/* {comment.timestamp} */}
-//               </li>
-//             ))}
-//           </ul>
-//         ) : (
-//           <div>NO VIDEO DETAILS AVAIL</div> // Encapsulate the message in a div for better styling and control
-//         )}
-//       </div>
-//     );
-//   }
-  

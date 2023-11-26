@@ -4,6 +4,7 @@ import VideoDetails from "./components/VideoList/VideoDetails";
 import videosData from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import VideoComponent from "./components/Video /Video";
+import Comments from "./components/Comments/Comments";
 
 import "./App.scss";
 
@@ -14,10 +15,10 @@ function App() {
   return (
     <>
       <Header logo="new logo" />
-      <VideoComponent selectedVideoData={selectedVideoData}/>
+      <VideoComponent selectedVideoData={selectedVideoData} />
 
       <div className="app-wrap">
-      <section>
+        <section>
           {selectedVideoData ? (
             <VideoDetails videoData={selectedVideoData} />
           ) : (
@@ -25,10 +26,10 @@ function App() {
           )}
         </section>
 
-
+        <Comments videoData={selectedVideoData} />
 
         <VideoList
-          videosData={videosData} 
+          videosData={videosData}
           setSelectedVideoData={setSelectedVideoData}
           selectedVideoData={selectedVideoData}
         />

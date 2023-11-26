@@ -1,0 +1,98 @@
+@use "./../../../src/styles/partials/global" as *;
+@use "./../../../src/styles/partials/mixins" as *;
+@use "./../../../src/styles/partials/variables" as *;
+
+
+.comments {
+    &__avatar-preview {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+    }  
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    &__input-wrap {
+        width: 100%;
+    }
+
+    #commentArea {
+        width: 100%;
+        box-sizing: border-box; 
+        margin-bottom: 10px; 
+      }
+
+
+
+}
+
+
+
+.comments__submit-btn {
+    /* your existing button styles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    // background-color: #yourColor; /* Replace with your color */
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: .66rem;
+    height: 2.8rem;
+    padding: 0 2.25rem;
+    position: relative;
+}
+
+.comments__submit-btn::before {
+    content: url('./../../../src/assets/images/Icons/add_comment.svg'); /* Path to your icon */
+    position: absolute;
+    left: 10px; /* Adjust as needed for positioning */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px; /* Adjust size as needed */
+    width: 20px; /* Adjust size as needed */
+}
+
+// .comments__innerText {
+//     /* your existing text styles, if any */
+// }
+
+// .comments-area__avatar-preview {
+//     width: 36px;
+//     height: 36px;
+//     border-radius: 50%;
+//     object-fit: cover;
+//     background-color: grey;
+// }
+
+
+.comments-area__item {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.comments-area__avatar-preview {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background-size: cover; 
+    background-position: center;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: grey;
+   
+}
+
+.comments-area__data-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
