@@ -6,18 +6,17 @@ export default function VideoList({
   setSelectedVideoData,
   selectedVideoData,
 }) {
-  console.log("Video List is being rendered");
+  // console.log("Video List is being rendered");
   return (
+    
     <ul className="list">
+       <label className="list__label">NEXT VIDEOS</label>
       {videosData
         .filter((videoData) => {
           return videoData.id !== selectedVideoData.id;
         })
         .map((videoData) => {
-          // if (selectedVideoData) {
-          //   // console.log(`is ${videoData.title} the same as ${selectedVideoData.title} ? ${videoData === selectedVideoData}`)
-          // }
-          console.log(videoData);
+          // console.log(videoData);
           return (
             <li
               key={videoData.id}

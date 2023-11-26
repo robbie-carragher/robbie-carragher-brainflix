@@ -8,7 +8,7 @@ import Comments from "./components/Comments/Comments";
 
 import "./App.scss";
 
-function App() {
+export default function App() {
   const [selectedVideoData, setSelectedVideoData] = useState(videosData[0]);
   console.log(selectedVideoData?.title);
 
@@ -17,45 +17,27 @@ function App() {
       <Header logo="new logo" />
       <VideoComponent selectedVideoData={selectedVideoData} />
 
-      <div className="app-wrap">
-        <section>
+      <section className="app-wrap">
+        <div>
           {selectedVideoData ? (
             <VideoDetails videoData={selectedVideoData} />
           ) : (
             "No video Selected"
           )}
-        </section>
 
-        <Comments videoData={selectedVideoData} />
+          <Comments videoData={selectedVideoData} />
+        </div>
 
-        <VideoList
-          videosData={videosData}
-          setSelectedVideoData={setSelectedVideoData}
-          selectedVideoData={selectedVideoData}
-        />
-
-        {/* <section>
-          {selectedVideoData ? (
-            <VideoDetails videoData={selectedVideoData} />
-          ) : (
-            "No video Selected"
-          )}
-        </section> */}
-      </div>
+        <div>
+          <VideoList
+            videosData={videosData}
+            setSelectedVideoData={setSelectedVideoData}
+            selectedVideoData={selectedVideoData}
+          />
+        </div>
+      </section>
     </>
   );
 }
 
-// function VideoDetails({ videoData }) {
-//   const { title, image, description } = videoData;
-
-//   return (
-//     <div className="video-gallery">
-//       <h1>{title}</h1>
-//       <img src={image} alt="video" className="video-gallery__image" />
-//       <div>{description}</div>
-//     </div>
-//   );
-// }
-
-export default App;
+// export default App;

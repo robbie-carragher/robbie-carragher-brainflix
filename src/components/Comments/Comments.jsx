@@ -40,7 +40,7 @@ export default function Comments({ videoData }) {
                   placeholder="Add a new comment"
                 ></textarea>
               </div>
-              <div className="comments-submit-wrap">
+              <div className="comments__submit-wrap">
                 <button type="submit" className="comments__submit-btn">
                   <p className="comments__innerText">COMMENT</p>
                 </button>
@@ -51,7 +51,7 @@ export default function Comments({ videoData }) {
           <ul id="error-messages"></ul>
         </form>
 
-        <ul className="comment-area"></ul>
+        {/* <ul className="comment-area"></ul> */}
       </section>
 
       {comments.length > 0 ? (
@@ -63,11 +63,11 @@ export default function Comments({ videoData }) {
 
                 <div className="comments-area__comments-wrap">
                   <div className="comments-area__data-wrap">
-                    <h3 className="comment-area__title"> {comment.name}</h3>
-                    <p className="comment-area__data">{formatDate(comment.timestamp)}</p>
+                    <h3 className="comments-area__title"> {comment.name}</h3>
+                    <p className="comments-area__data">{formatDate(comment.timestamp)}</p>
                   </div>
 
-                  <div className="comment-area__comments">
+                  <div className="comments-area__comments">
                     {comment.comment}
                   </div>
                 </div>

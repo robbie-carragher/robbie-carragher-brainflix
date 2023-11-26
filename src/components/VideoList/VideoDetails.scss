@@ -2,48 +2,55 @@
 @use "./../../../src/styles/partials/mixins" as *;
 @use "./../../../src/styles/partials/variables" as *;
 
-
 .details {
-padding: 0 1rem;
+  padding: 0 1rem;
 
-   &__inner-wrapper{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 0 auto;
-        // width: 80%;
-        align-items: center;
-    }  
+  &__outer-wrapper {
+    border-bottom: 1px solid $second3;
+  }
 
-    &__inner-data-wrap {
-        display: flex;
-        flex-direction: row;
-    
-    }
+  &__inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    width: 70%;
 
-    &__data {
-        color:$primary3;
-    }
+  }
+
+  &__inner-data-wrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__data {
+    color: $primary3;
+    padding-left: 1rem;
+  }
+
+  &__data-time {
+    color: $primary3;
+
+  }
+
+  &__title {
+    border-bottom: 1px solid $second3;
+    width: 97%;
+
+  }
+
+  &__title__inner {
+    margin: 1rem 0 1rem 0;
+  }
+
+  &__inner-data-wrap--move {
+    margin: 1rem 0 1rem 0;
 }
 
+&__description {
+    padding-top: 1.5rem;
 
+}
 
-
-
-
-// .details__inner-wrapper{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     margin: 0 auto;
-//     width: 80%;
-//     align-items: center;
-// }
-
-
-// .details__inner-data-wrap {
-//     display: flex;
-//     flex-direction: row;
-
-// }
-
+}

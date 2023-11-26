@@ -1,18 +1,35 @@
+@use "./../../../src/styles/partials/global" as *;
+@use "./../../../src/styles/partials/mixins" as *;
+@use "./../../../src/styles/partials/variables" as *;
+
 .list {
    list-style-type: none;
+   padding: 0 1rem 0 1rem;
 
+   &__label {
+    color: #AFAFAF;
+    margin: 0rem 0 1.5rem 0;
+    display: inline-block;
+   }
+
+   &__details {
+    margin: -3rem 0 0 1rem;
+   }
+  
     &__item-image {
-        // width:   20rem; 
-        width: 123px;
-        height: 68px;
-        object-fit: cover; 
-        min-width: 123px;  
+        width: 7.687rem;
+        height: 75px;
+        object-fit: cover;
+        min-width: 123px;
+        border-radius: 4px;
+        margin-bottom: 1rem;
     }
 
     &__link {
         display: flex;
         align-items: center;
         text-decoration: none;
+        color: $second1;
 
     }
 
@@ -21,7 +38,7 @@
     }
 
     .active {
-        background: beige;
+        background: $primary4;
         opacity: .5;
     }
 }
