@@ -2,7 +2,11 @@
    list-style-type: none;
 
     &__item-image {
-        width:   20rem;   
+        // width:   20rem; 
+        width: 123px;
+        height: 68px;
+        object-fit: cover; 
+        min-width: 123px;  
     }
 
     &__link {
@@ -22,25 +26,3 @@
     }
 }
 
-
-// .details__inner-wrapper{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     margin: 0 auto;
-//     width: 80%;
-//     align-items: center;
-// }
-
-
-// .details__inner-data-wrap {
-//     display: flex;
-//     flex-direction: row;
-
-// }
-
-.list__item-image {
-    width: 123px;
-    height: 68px;
-    object-fit: cover; /* Ensures the image covers the area, may crop some parts */
-}
