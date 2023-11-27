@@ -1,4 +1,6 @@
-@use "./styles/partials/global" as *;
+@use "./../src/styles/partials/global" as *;
+@use "./../src/styles/partials/mixins" as *;
+@use "./../src/styles/partials/variables" as *;
 
 
 .video-gallery {
@@ -10,5 +12,11 @@
 .app-wrap {
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+        display: flex;
+        // flex-direction: row;
+    
+    }
 }
 

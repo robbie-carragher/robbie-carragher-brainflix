@@ -1,4 +1,3 @@
-
 import "./Comments.scss";
 
 export default function Comments({ videoData }) {
@@ -6,8 +5,8 @@ export default function Comments({ videoData }) {
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, "0");
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
     const year = date.getFullYear();
     return `${month}/${day}/${year}`;
   };
@@ -32,18 +31,20 @@ export default function Comments({ videoData }) {
               <div className="comments__label comments__label--move">
                 <label htmlFor="commentArea">JOIN THE CONVERSATION</label>
               </div>
-              <div className="comments__text">
-                <textarea
-                  id="commentArea"
-                  className="comments__commentArea"
-                  name="comment"
-                  placeholder="Add a new comment"
-                ></textarea>
-              </div>
-              <div className="comments__submit-wrap">
-                <button type="submit" className="comments__submit-btn">
-                  <p className="comments__innerText">COMMENT</p>
-                </button>
+              <div className="comments__input--flex">
+                <div className="comments__text">
+                  <textarea
+                    id="commentArea"
+                    className="comments__commentArea"
+                    name="comment"
+                    placeholder="Add a new comment"
+                  ></textarea>
+                </div>
+                <div className="comments__submit-wrap">
+                  <button type="submit" className="comments__submit-btn">
+                    <p className="comments__innerText">COMMENT</p>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -51,7 +52,6 @@ export default function Comments({ videoData }) {
           <ul id="error-messages"></ul>
         </form>
 
-        {/* <ul className="comment-area"></ul> */}
       </section>
 
       {comments.length > 0 ? (
@@ -64,7 +64,9 @@ export default function Comments({ videoData }) {
                 <div className="comments-area__comments-wrap">
                   <div className="comments-area__data-wrap">
                     <h3 className="comments-area__title"> {comment.name}</h3>
-                    <p className="comments-area__data">{formatDate(comment.timestamp)}</p>
+                    <p className="comments-area__data">
+                      {formatDate(comment.timestamp)}
+                    </p>
                   </div>
 
                   <div className="comments-area__comments">

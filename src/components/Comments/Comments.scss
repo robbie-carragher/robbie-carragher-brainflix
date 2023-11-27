@@ -80,6 +80,12 @@
     background: #fafafa;
     padding: 1rem 0 6rem 1rem;
   }
+
+  &__input--flex{
+    display: flex;
+}
+
+  
 }
 
 .comments-area {
@@ -87,6 +93,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+  &__avatar-preview {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: $second3;
   }
 
   &__comments {
