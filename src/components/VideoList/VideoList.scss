@@ -2,12 +2,23 @@
 @use "./../../../src/styles/partials/mixins" as *;
 @use "./../../../src/styles/partials/variables" as *;
 
+list-section {
+    @include desktop {
+        width: 27rem;
+    }
+}
+
+
 .list {
    list-style-type: none;
    padding: 0 1rem 0 1rem;
 
+   @include desktop {
+    padding: 2rem 1rem 0 2rem;
+   }
+
    &__label {
-    color: #AFAFAF;
+    color: $primary3;
     margin: 0rem 0 1.5rem 0;
     display: inline-block;
    }
@@ -23,6 +34,7 @@
         min-width: 123px;
         border-radius: 4px;
         margin-bottom: 1rem;
+        background: $second3;
     }
 
     &__link {
@@ -42,4 +54,3 @@
         opacity: .5;
     }
 }
-

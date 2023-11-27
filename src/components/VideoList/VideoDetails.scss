@@ -17,6 +17,11 @@
     padding-bottom: 1rem;
     width: 70%;
 
+    @include tablet {
+      width: 100%;
+      margin-top: -2rem;
+    }
+
   }
 
   &__inner-data-wrap {
@@ -32,11 +37,19 @@
   &__data-time {
     color: $primary3;
 
+    @include tablet {
+      margin-left: 2rem;
+    }
+
   }
 
   &__title {
     border-bottom: 1px solid $second3;
     width: 97%;
+
+    @include tablet {
+      border-bottom:none; 
+    }
 
   }
 
@@ -46,6 +59,9 @@
 
   &__inner-data-wrap--move {
     margin: 1rem 0 1rem 0;
+    @include tablet {
+      margin: 1rem 2rem 1rem 0;
+    }
 }
 
 &__description {

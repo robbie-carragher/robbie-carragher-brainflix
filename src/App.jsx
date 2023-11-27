@@ -18,7 +18,7 @@ export default function App() {
       <VideoComponent selectedVideoData={selectedVideoData} />
 
       <section className="app-wrap">
-        <div>
+        <div className="app-wrap__border-right">
           {selectedVideoData ? (
             <VideoDetails videoData={selectedVideoData} />
           ) : (

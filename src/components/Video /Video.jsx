@@ -5,9 +5,9 @@ import "./Video.scss";
 function VideoComponent({selectedVideoData}) {
   console.log("this is selected data" , selectedVideoData)
   return (
-    <div>
+    <section className="video-section">
    <video className="full-width-video" controls poster={selectedVideoData.image}></video>
-    </div>
+    </section>
   );
 }
 

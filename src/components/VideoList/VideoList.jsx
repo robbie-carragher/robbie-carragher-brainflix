@@ -6,10 +6,10 @@ export default function VideoList({
   setSelectedVideoData,
   selectedVideoData,
 }) {
-  // console.log("Video List is being rendered");
   return (
     
-    <ul className="list">
+<div className="list-section">
+<ul className="list">
        <label className="list__label">NEXT VIDEOS</label>
       {videosData
         .filter((videoData) => {
@@ -47,5 +47,6 @@ export default function VideoList({
           );
         })}
     </ul>
+</div>
   );
 }

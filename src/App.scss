@@ -2,21 +2,23 @@
 @use "./../src/styles/partials/mixins" as *;
 @use "./../src/styles/partials/variables" as *;
 
-
-.video-gallery {
-    &__image {
-        width: 20rem;
-    }
-}
-
 .app-wrap {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding: 0 2.25rem;
+  }
+
+  @include desktop {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 0 3.9375rem;
+  }
 
-    @include tablet {
-        display: flex;
-        // flex-direction: row;
-    
+  &__border-right {
+    @include desktop {
+      border-right: 1px solid $second3;
     }
+  }
 }
-

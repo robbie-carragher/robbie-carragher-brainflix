@@ -45,6 +45,11 @@
     height: 36px;
     border-radius: 50%;
     object-fit: cover;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__upload-btn {
@@ -128,17 +133,31 @@
     padding: 0 2.25rem;
   }
 
+  @include desktop {
+    padding: 0 3.9375rem;
+  }
+
   &__avatar-preview {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     object-fit: cover;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__links {
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @include tablet {
+      
+    }
+
   }
 
   &__links--right {
@@ -158,8 +177,13 @@
     border-radius: 4px;
 
     @include tablet {
-      padding: 1rem 4rem;
+      padding: .8rem 3rem;
     }
+  }
+
+  &__upload-btn:hover {
+background-color:$second2;
+
   }
 
   &__upload-icon {
@@ -192,4 +216,13 @@
     width: 100%;
     margin-right: 4rem;
   }
+}
+
+#search-box:focus {
+  border-color: $second2; 
+  outline: none; 
+}
+
+#search-box {
+  background-color: $second4; 
 }
