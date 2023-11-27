@@ -10,7 +10,6 @@ import "./App.scss";
 
 export default function App() {
   const [selectedVideoData, setSelectedVideoData] = useState(videosData[0]);
-  console.log(selectedVideoData?.title);
 
   return (
     <>
@@ -40,4 +39,4 @@ export default function App() {
   );
 }
 
-// export default App;
+

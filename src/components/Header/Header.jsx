@@ -3,13 +3,9 @@ import "./../../styles/partials/_global.scss";
 import avatarImage from "./../../../src/assets/images/Mohan-muruge.jpg";
 import logoImage from "./../../../src/assets/images/Logo/BrainFlix-logo.svg";
 
-// import FileUploadComponent from "../upload button";
-
 const Header = () => {
   return (
     <div>
-      {" "}
-      {/* Add this div as a parent wrapper */}
       <header className="header">
         <nav className="header__links--left">
           <a href="/">
@@ -30,11 +26,10 @@ const Header = () => {
         <div className="header__upload-btn">UPLOAD</div>
       </header>
 
-      {/* <header className="header2">
+      <header className="header2">
         <nav className="header2__links--left">
           <a href="/">
-       
-            <img src={logoImage} alt="Logo" className="header2__links"></img>
+            <img src={logoImage} alt="Logo" className="header2__links" />
           </a>
         </nav>
         <div className="header2__links header2__links--right">
@@ -42,42 +37,22 @@ const Header = () => {
             <input type="search" id="search-box" placeholder="Search" />
           </div>
 
-          <div className="header2__upload-btn">UPLOAD</div>
+          <div className="header2__upload-btn">
+            <img
+              src="/src/assets/images/Icons/upload.svg"
+              alt="Upload Icon"
+              className="header2__upload-icon"
+            />
+            UPLOAD
+          </div>
 
           <img
             src={avatarImage}
             alt="Avatar Image"
             className="header2__avatar-preview"
-          ></img>
+          />
         </div>
-      </header> */}
-
-<header className="header2">
-  <nav className="header2__links--left">
-    <a href="/">
-      <img src={logoImage} alt="Logo" className="header2__links" />
-    </a>
-  </nav>
-  <div className="header2__links header2__links--right">
-    <div className="search-container">
-      <input type="search" id="search-box" placeholder="Search" />
-    </div>
-
-    <div className="header2__upload-btn">
-      <img src="/src/assets/images/Icons/upload.svg" alt="Upload Icon" className="header2__upload-icon" />
-      UPLOAD
-    </div>
-
-    <img
-      src={avatarImage}
-      alt="Avatar Image"
-      className="header2__avatar-preview"
-    />
-  </div>
-</header>
-
-
-
+      </header>
     </div>
   );
 };

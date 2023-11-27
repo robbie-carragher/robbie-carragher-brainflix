@@ -3,24 +3,22 @@
 @use "./../../../src/styles/partials/variables" as *;
 
 .full-width-video {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 
-    @include tablet {
-      background-color:$second1 ;
-      width: 90%;
-      display: flex;
-      margin: 0 auto ;
-    }
-
-    @include desktop {
-      background-color:$second1 ;
-      width: 87%;
-    }
+  @include tablet {
+    background-color: $second1;
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
   }
 
-
-  .video-section{
-    background: $second1;
+  @include desktop {
+    background-color: $second1;
+    width: 87%;
+  }
 }
 
+.video-section {
+  background: $second1;
+}

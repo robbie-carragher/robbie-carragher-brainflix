@@ -16,7 +16,6 @@ export default function VideoList({
           return videoData.id !== selectedVideoData.id;
         })
         .map((videoData) => {
-          // console.log(videoData);
           return (
             <li
               key={videoData.id}

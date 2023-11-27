@@ -21,7 +21,6 @@
       width: 100%;
       margin-top: -2rem;
     }
-
   }
 
   &__inner-data-wrap {
@@ -40,7 +39,6 @@
     @include tablet {
       margin-left: 2rem;
     }
-
   }
 
   &__title {
@@ -48,9 +46,8 @@
     width: 97%;
 
     @include tablet {
-      border-bottom:none; 
+      border-bottom: none;
     }
-
   }
 
   &__title__inner {
@@ -62,30 +59,23 @@
     @include tablet {
       margin: 1rem 2rem 1rem 0;
     }
-}
+  }
 
-&__description {
+  &__description {
     padding-top: 1.5rem;
-
-}
-
-&__left {
-  
-@include tablet {
-  display: flex;
-  align-items: center;
-}
-
-}
-
-&__right {
-  
-  @include tablet {
-    display: flex;
-    align-items: center;
-  }
-  
   }
 
+  &__left {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
 
+  &__right {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
 }

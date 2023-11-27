@@ -42,23 +42,22 @@
     box-sizing: border-box;
     margin-bottom: 10px;
 
-@include tablet {
-  width: 93%;
-  box-sizing: border-box;
-  padding: 1rem 0 0 1rem;
-  border-radius: 4px;
-  resize: vertical;
-}
-
+    @include tablet {
+      width: 93%;
+      box-sizing: border-box;
+      padding: 1rem 0 0 1rem;
+      border-radius: 4px;
+      resize: vertical;
+    }
   }
 
   &__commentArea:focus {
-    border-color: $second1;
+    border-color: $second2;
     outline: none;
   }
 
   &__commentArea::placeholder {
-    color: black;
+    color: $second1;
     opacity: 1;
   }
 
@@ -93,9 +92,9 @@
   }
 
   &__commentArea {
-    border: 1px solid #e1e1e1;
+    border: 1px solid $second3;
     border-radius: 4px;
-    background: #fafafa;
+    background: $second4;
     padding: 1rem 0 6rem 1rem;
   }
 
@@ -149,7 +148,7 @@
   }
 
   &__item {
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid $second3;
   }
 
   &__list {
@@ -163,9 +162,4 @@
 
 .comments-section {
   padding: 1rem 1rem 0 1rem;
-}
-
-#commentArea:focus {
-  border: 1px solid $second2;
-  outline: none;
 }
