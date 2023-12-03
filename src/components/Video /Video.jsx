@@ -5,7 +5,7 @@ export default function VideoComponent({ videosData, selectedVideoData }) {
   const videoToShow = selectedVideoData || (videosData && videosData[0]);
 
   if (!videoToShow) {
-    return <div></div>;
+    return <div>Video is Loading...</div>;
   }
 
   return (
