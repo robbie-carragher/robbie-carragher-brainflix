@@ -1,15 +1,8 @@
 import "./Comments.scss";
+import FormatDate from "../../utils";
 
 export default function Comments({ videoData }) {
-  const { title, comments } = videoData;
-
-  const formatDate = (timestamp) => {
-    const date = new Date(timestamp);
-    const day = date.getDate().toString().padStart(2, "0");
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const year = date.getFullYear();
-    return `${month}/${day}/${year}`;
-  };
+  const { title, comments,timestamp } = videoData;
 
   return (
     <section className="comments-section">
@@ -65,7 +58,7 @@ export default function Comments({ videoData }) {
                   <div className="comments-area__data-wrap">
                     <h3 className="comments-area__title"> {comment.name}</h3>
                     <p className="comments-area__data">
-                      {formatDate(comment.timestamp)}
+                      {FormatDate(timestamp)}
                     </p>
                   </div>
 

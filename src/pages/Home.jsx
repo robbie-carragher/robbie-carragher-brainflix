@@ -1,6 +1,6 @@
 import { useState } from "react";
 import VideoList from "./../components/VideoList/VideoList";
-import VideoDetails from "./../components/VideoList/VideoDetails";
+import VideoDetails from "./../components/VideoDetails/VideoDetails";
 import videosData from "./../data/video-details.json";
 import Header from "./../components/Header/Header";
 import VideoComponent from "./../components/Video /Video";
@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+    
       <VideoComponent selectedVideoData={selectedVideoData} />
 
       <section className="app-wrap">
