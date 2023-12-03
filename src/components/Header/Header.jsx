@@ -1,11 +1,10 @@
-
 import "./Header.scss";
 import "./../../styles/partials/_global.scss";
 import avatarImage from "./../../../src/assets/images/Mohan-muruge.jpg";
 import logoImage from "./../../../src/assets/images/Logo/BrainFlix-logo.svg";
 import { Link } from "react-router-dom";
 
-export default function Header()  {
+export default function Header() {
   return (
     <div>
       <header className="header">
@@ -69,7 +68,3 @@ export default function Header()  {
     </div>
   );
 }
-
-
-
-

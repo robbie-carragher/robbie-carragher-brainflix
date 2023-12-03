@@ -1,37 +1,11 @@
 import "./Video.scss";
 
-// export default function VideoComponent({ selectedVideoData }) {
-//   return (
-//     <section className="video-section">
-//       <video
-//         className="full-width-video"
-//         controls
-//         poster={selectedVideoData.image}
-//       ></video>
-//     </section>
-//   );
-// }
+export default function VideoComponent({ videosData, selectedVideoData }) {
+  // Select the first video as default if no video is currently selected
+  const videoToShow = selectedVideoData || (videosData && videosData[0]);
 
-
-// export default function VideoComponent({ selectedVideoData }) {
-//   if (!selectedVideoData) {
-//     return <div>Loading...</div>; 
-//   }
-
-//   return (
-//     <section className="video-section">
-//       <video
-//         className="full-width-video"
-//         controls
-//         poster={selectedVideoData.image}
-//       ></video>
-//     </section>
-//   );
-// }
-
-export default function VideoComponent({ selectedVideoData }) {
-  if (!selectedVideoData) {
-    return <div>Loading...</div>; 
+  if (!videoToShow) {
+    return <div></div>;
   }
 
   return (
@@ -39,7 +13,7 @@ export default function VideoComponent({ selectedVideoData }) {
       <video
         className="full-width-video"
         controls
-        poster={selectedVideoData.image}
+        poster={videoToShow.image}
       ></video>
     </section>
   );
