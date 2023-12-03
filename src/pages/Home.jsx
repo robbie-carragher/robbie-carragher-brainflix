@@ -2,7 +2,7 @@ import { useState } from "react";
 import VideoList from "./../components/VideoList/VideoList";
 import VideoDetails from "./../components/VideoDetails/VideoDetails";
 import videosData from "./../data/video-details.json";
-import Header from "./../components/Header/Header";
+
 import VideoComponent from "./../components/Video /Video";
 import Comments from "./../components/Comments/Comments";
 
