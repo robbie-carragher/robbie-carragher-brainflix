@@ -1,196 +1,396 @@
+// @use "./../../../src/styles/partials/global" as *;
+// @use "./../../../src/styles/partials/mixins" as *;
+// @use "./../../../src/styles/partials/variables" as *;
+
+// .uploads {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   height: 6rem;
+//   background: $primary4;
+//   width: 100%;
+//   margin: 1rem auto 6rem auto;
+//   padding: 0 1rem;
+//   border-top: 2px solid $second3;
+//   margin-bottom: 37rem;
+
+//   &__links, &__links--right {
+//     align-items: center;
+//     width: 100%;
+//     gap: 30px;
+//   }
+
+//   &__links--left {
+//     padding-left: 1.25rem;
+//     align-self: left;
+//   }
+
+//   &__publish-btn {
+//     background: $primary2;
+//     color: $primary4;
+//     padding: 1.2rem 0;
+//     cursor: pointer;
+//     text-align: center;
+//     border: none;
+//     border-radius: 4px;
+//     position: relative;
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     text-decoration: none;
+//   }
+
+//   &__link-mobile {
+//     width: 100%;
+//     text-decoration: none;
+//     display: block;
+
+
+//     @include tablet {
+//         max-width: 0rem;
+//         min-width: 13rem;
+     
+//     }
+//   }
+
+//   &__upload-icon {
+//     position: absolute;
+//     left: 1rem;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+
+//   &__search-container, &__thumbnail-wrap {
+//     display: flex;
+//     flex-direction: column;
+//     margin: 1rem 0;
+//     flex-grow: 1;
+//   }
+
+//   #uploads-box, #uploads-box-2 {
+//     padding-left: 30px;
+//     border: 1px solid $second3;
+//     border-radius: 4px;
+//     width: 100%;
+//     margin-right: 10px;
+//     padding: 1rem;
+//     padding-left: 3rem;
+//     background-size: 15px;
+//   }
+
+//   &__thumbnail {
+//     width: 100%;
+//     height: auto;
+//     border-radius: 4px;
+//   }
+
+//   &__cancel-link, &__cancel-btn {
+//     display: block;
+//     margin-top: 2rem;
+//     color: $primary2;
+//     text-align: center;
+//     text-decoration: none;
+//     font-weight: 600;
+//     margin-bottom: 4rem;
+
+
+//     @include tablet {
+//         margin-bottom: 0;
+//     }
+//   }
+
+//   &__btn-wrap {
+//     width: 100%;
+//     display: flex;
+//     justify-content: flex-start;
+//     flex-direction: column;
+//   }
+
+//   &__sub-title {
+//     color: $primary3;
+//   }
+
+//   &:focus {
+//     border-color: $primary2;
+//     outline: none;
+//   }
+
+//   @include tablet {
+//     border-top: none;
+//     padding: 0 2.25rem;
+  
+
+//     &__thumbnail {
+//       width: 50%;  
+
+//       @include desktop {
+//         width: 100%;
+//       }
+//     }
+
+//     &__cancel-link, &__cancel-btn {
+//       display: flex;
+//       color: #0095FF;
+//       align-items: center;  
+//       margin-top: 0;
+//     }
+
+//     &__btn-wrap {
+//       flex-direction: row-reverse;
+//       margin-left: auto;
+//       padding-bottom: 2rem;
+//     }
+
+//     &__title-wrap {
+//       border-bottom: 1px solid $second3;
+//     }
+
+//     &__thumbnail-wrap {
+//       margin-top: 2rem;
+     
+//     }
+//   }
+
+//   &__cancel-text {
+//    @include tablet {
+//     margin: 0 4rem 0 0;
+//    }
+// }
+
+
+// &__search-container {
+// @include tablet {
+//     border-bottom: 1px solid #E1E1E1;
+//     padding: 0 0 2rem 0; 
+// }
+
+// @include desktop{
+//     border-bottom: none;
+//     padding: 0 0 2rem 0; 
+// }
+
+// }
+
+// &__links {
+// @include desktop {
+//     display: flex;
+//     border-bottom: 1px solid #E1E1E1;
+// }
+// }
+
+// &__search-container {
+//     width: 100%;  
+//     display: flex;
+//     flex-direction: column;
+  
+//     &__sub-title, 
+//     #uploads-box {
+//       width: 100%; 
+//     }
+  
+
+//   }
+
+
+// }
+
+
+
+// #upload-box:focus {
+//     border-color: $primary2;
+//     outline: none;
+//   }
+  
+//   #upload-box {
+//     background-color: $second4;
+//   } 
+
 @use "./../../../src/styles/partials/global" as *;
 @use "./../../../src/styles/partials/mixins" as *;
 @use "./../../../src/styles/partials/variables" as *;
 
 .uploads {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 6rem;
-    background: $primary4;
-    z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 6rem;
+  background: $primary4;
+  width: 100%;
+  margin: 1rem auto 6rem auto;
+  padding: 0 1rem;
+  border-top: 2px solid $second3;
+  margin-bottom: 37rem;
+
+  @include tablet {
+    border-top: none;
+    padding: 0 2.25rem;
+  }
+
+  @include desktop {
+    border-top: none;
+    padding: 0 4rem;
+    width: 88%;
+
+  }
+
+
+
+  &__links, &__links--right {
     align-items: center;
     width: 100%;
-    margin: 1rem auto 6rem auto;
-    padding: 0 1rem;
+    gap: 30px;
 
-    &__links {
-    //   display: flex;
-      align-items: center;
-      gap: 30px;
-  
-      &--left {
-        padding-left: 1.25rem;
-        align-self: left;
-      }
-  
-    //   &--right {
-    //     // padding-right: 1.25rem;
-    //     // align-self: right;
-    //   }
+    @include desktop {
+      display: flex;
+      border-bottom: 1px solid #E1E1E1;
     }
-  
-    &__publish-btn {
-    //   display: flex;
-      background: $primary2;
-      color: $primary4;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 1.2rem 0;
-      cursor: pointer;
-      text-align: center;
-      border: none;
-      border-radius: 4px;
-      position: relative;
-    }
-  
-  
-   &__link-mobile{
-      width: 100%;
   }
-  
-  
+
+  &__links--left {
+    padding-left: 1.25rem;
+    align-self: left;
+  }
+
+  &__publish-btn {
+    background: $primary2;
+    color: $primary4;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  &__link-mobile {
+    width: 100%;
+    text-decoration: none;
+    display: block;
+
+    @include tablet {
+      max-width: 0rem;
+      min-width: 13rem;
+    }
+  }
+
   &__upload-icon {
-    position: absolute; 
-    left: 1rem; 
-    top: 50%; 
+    position: absolute;
+    left: 1rem;
+    top: 50%;
     transform: translateY(-50%);
   }
-  
-    #uploads-box{
-      padding-left: 30px;
-    //   background-image: url("./../../../src/assets/images/Icons/search.svg");
-      background-position: 10px center;
-      background-repeat: no-repeat;
-      background-size: 15px;
-      border: 1px solid $second3;
-      border-radius: 4px;
-      width: 100%;
-      margin-right: 10px;
-      padding: 1rem;
-      padding-left: 3rem;
+
+  &__search-container, &__thumbnail-wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    flex-grow: 1;
+
+    @include tablet {
+      border-bottom: 1px solid #E1E1E1;
+      padding: 0 0 2rem 0;
     }
-  
-    &__links--right {
-    //   display: flex;
-      align-items: center;
+
+    @include desktop {
+      border-bottom: none;
+    }
+  }
+
+  #uploads-box, #uploads-box-2 {
+    padding-left: 30px;
+    border: 1px solid $second3;
+    border-radius: 4px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 1rem;
+    padding-left: 3rem;
+    background-size: 15px;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
       width: 100%;
     }
-  
-    &__search-container {
-      flex-grow: 1;
-      align-items: center;
-      margin: 1rem 0 1rem 0;
+  }
+
+  &__cancel-link, &__cancel-btn {
+    display: block;
+    margin-top: 2rem;
+    color: $primary2;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 4rem;
+
+    @include tablet {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 1rem 0 1rem 0;
-
-      #uploads-box,
-      #uploads-box-2 {
-        padding-left: 30px;
-        // background-image: url("./../../../src/assets/images/Icons/search.svg");
-        // background-position: 10px center;
-        // background-repeat: no-repeat;
-        background-size: 15px;
-        border: 1px solid $second3;
-        border-radius: 4px;
-        width: 100%;
-        margin-right: 10px;
-        padding: 1rem;
-        padding-left: 3rem;
-
-        &::before {
-        //   content: url("./../../../src/assets/images/Icons/search.svg");
-          position: absolute;
-          left: 1.6rem;
-          top: 1rem;
-          transform: translateY(-50%);
-          height: 20px;
-          width: 20px;
-        }
-      }
-
-    }
-  
-    .uploads__thumbnail {
-        width: 100%; /* Makes the image take the full width of its container */
-        height: auto; /* Maintains the aspect ratio of the image */
-      }
-
-
-      .uploads__publish-btn  {
-        text-decoration: none; /* Removes underline from links inside `.uploads__publish-btn` */
-      }
-  
-  }
-
-  .uploads__link-mobile {
-    text-decoration: none; /* Removes underline from the link */
-  
-    &:hover, &:focus, &:active {
-      text-decoration: none; /* Also remove underline on hover, focus, and active states */
+      color: #0095FF;
+      align-items: center;  
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
-  
 
-  .uploads__cancel-link, .uploads__cancel-btn {
-    display: block; /* Ensures the link/button takes its own line */
-    margin-top: 10px; /* Adjust as needed for spacing */
-    color: blue; /* Style as needed */
-    text-align: center; /* Center align if desired */
-    text-decoration: none; /* Removes underline for the link */
+  &__btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row-reverse;
+      margin-left: auto;
+      padding-bottom: 2rem;
+    }
   }
 
-  .uploads__link-mobile {
-    display: block; /* Makes the link a block element */
-    width: 100%; /* Ensures the link stretches the full width of its container */
-    text-align: center; /* Centers the content inside the link */
-  
-    .uploads__publish-btn {
-      width: 100%; /* Ensures the button stretches the full width of the link */
-      display: inline-flex; /* Uses flexbox for internal alignment */
-      align-items: center; /* Aligns items vertically in the center */
-      justify-content: center; /* Centers content horizontally */
-      /* Add other styles as needed */
-    }
-  
+  &__sub-title {
+    color: $primary3;
+  }
 
+  &:focus {
+    border-color: $primary2;
+    outline: none;
   }
-  
-  .uploads__btn-wrap {
-    width: 100%; /* Ensures the wrapper takes the full width of its container */
-  
-    .uploads__link-mobile {
-      display: block; /* Makes the link a block element */
-      width: 100%; /* Ensures the link stretches the full width of its container */
-  
-      .uploads__publish-btn {
-        width: 100%; /* Ensures the button stretches the full width of the link */
-        display: flex; /* Uses flexbox for internal alignment */
-        align-items: center; /* Aligns items vertically in the center */
-        justify-content: center; /* Centers content horizontally */
-        /* Add other styles as needed */
-      }
-  
-      .uploads__upload-icon {
-        /* Style your icon as needed */
-      }
-  
-      .uploads__btn-text {
-        /* Style your button text as needed */
-      }
-    }
-  
-    .uploads__cancel-link {
-      display: block; /* Makes the cancel link a block element */
-      width: 100%; /* Ensures the cancel link stretches the full width of its container */
-      /* Add other styles as needed */
-    }
-  
-    .uploads__cancel-text {
-      /* Style your cancel text as needed */
+
+  &__cancel-text {
+    @include tablet {
+      margin: 0 4rem 0 0;
     }
   }
+
+  &__search-container {
+    width: 100%;  
+    display: flex;
+    flex-direction: column;
   
+    &__sub-title, 
+    #uploads-box {
+      width: 100%; 
+    }
+  }
+
+}
+
+#uploads-box:focus {
+  border-color: $primary2;
+  outline: none;
+}
+
+#uploads-box {
+  background-color: $second4;
+}
