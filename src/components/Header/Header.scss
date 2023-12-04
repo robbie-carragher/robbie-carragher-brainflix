@@ -13,7 +13,6 @@
   width: 100%;
   margin: 1rem auto 6rem auto;
   padding: 0 1rem;
- 
 
   @include tablet {
     display: none;
@@ -67,22 +66,20 @@
     border: none;
     border-radius: 4px;
     position: relative;
-    font-weight: 600; 
+    font-weight: 600;
   }
 
-
- &__link-mobile{
+  &__link-mobile {
     width: 100%;
-    text-decoration: none; 
-}
+    text-decoration: none;
+  }
 
-
-&__upload-icon {
-  position: absolute; 
-  left: 1rem; 
-  top: 50%; 
-  transform: translateY(-50%);
-}
+  &__upload-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   #search-box {
     padding-left: 30px;
@@ -111,7 +108,6 @@
     margin: 1rem 0 1rem 0;
   }
 
-
   #search-box::before {
     content: url("./../../../src/assets/images/Icons/search.svg");
     position: absolute;
@@ -121,10 +117,6 @@
     height: 20px;
     width: 20px;
   }
-
-
-
-
 }
 
 //  Desktop/Tablet View
@@ -147,7 +139,7 @@
   }
 
   @include desktop {
-    padding: 0 3.9375rem;
+    padding: 0 3.9375rem 1rem 3.9375rem;
   }
 
   &__avatar-preview {
@@ -186,7 +178,6 @@
     text-align: center;
     border: none;
     border-radius: 4px;
-   
 
     @include tablet {
       padding: 0.8rem 3rem;
@@ -227,8 +218,6 @@
     width: 100%;
     margin-right: 4rem;
   }
-
-
 }
 
 #search-box:focus {
@@ -241,7 +230,6 @@
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none;
   font-weight: 500;
 }
-

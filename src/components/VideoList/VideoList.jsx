@@ -6,7 +6,6 @@ export default function VideoList({ videosData }) {
   const { videoId } = useParams();
   const arrVideosData = Array.isArray(videosData) ? videosData : [];
 
-  // Determine the video ID to compare against. If none is in the URL, use the first video's ID.
   const currentVideoId =
     videoId || (arrVideosData.length > 0 ? arrVideosData[0].id : null);
 
@@ -18,7 +17,7 @@ export default function VideoList({ videosData }) {
           .filter((videoData) => videoData.id !== currentVideoId)
           .map((videoData) => (
             <li key={videoData.id} className="list__item">
-              <Link to={`/video/${videoData.id}`}>
+              <Link to={`/video/${videoData.id}`} className="list__item-wrap">
                 <img
                   src={videoData.image}
                   alt={videoData.title}

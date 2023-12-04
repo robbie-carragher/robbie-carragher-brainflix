@@ -10,11 +10,13 @@ export default function VideoComponent({ videosData, selectedVideoData }) {
 
   return (
     <section className="video-section">
-      <video
-        className="full-width-video"
+<div className="video-section_wrap">
+<video
+        className="video-section__fullwidth"
         controls
         poster={videoToShow.image}
       ></video>
+</div>
     </section>
   );
 }

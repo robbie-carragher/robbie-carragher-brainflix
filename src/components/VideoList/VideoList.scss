@@ -23,7 +23,7 @@
   }
 
   &__details {
-    margin: -3rem 0 0 1rem;
+    margin: -1rem 0 0 1rem;
   }
 
   &__item-image {
@@ -51,4 +51,16 @@
     background: $primary4;
     opacity: 0.5;
   }
+
+  .list__item-wrap {
+    display: flex;
+  }
+}
+
+.list__title {
+  color: $second1;
+}
+
+.list__channel {
+  color: $second1;
 }

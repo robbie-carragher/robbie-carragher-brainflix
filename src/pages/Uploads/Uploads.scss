@@ -1,211 +1,3 @@
-// @use "./../../../src/styles/partials/global" as *;
-// @use "./../../../src/styles/partials/mixins" as *;
-// @use "./../../../src/styles/partials/variables" as *;
-
-// .uploads {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   height: 6rem;
-//   background: $primary4;
-//   width: 100%;
-//   margin: 1rem auto 6rem auto;
-//   padding: 0 1rem;
-//   border-top: 2px solid $second3;
-//   margin-bottom: 37rem;
-
-//   &__links, &__links--right {
-//     align-items: center;
-//     width: 100%;
-//     gap: 30px;
-//   }
-
-//   &__links--left {
-//     padding-left: 1.25rem;
-//     align-self: left;
-//   }
-
-//   &__publish-btn {
-//     background: $primary2;
-//     color: $primary4;
-//     padding: 1.2rem 0;
-//     cursor: pointer;
-//     text-align: center;
-//     border: none;
-//     border-radius: 4px;
-//     position: relative;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-decoration: none;
-//   }
-
-//   &__link-mobile {
-//     width: 100%;
-//     text-decoration: none;
-//     display: block;
-
-
-//     @include tablet {
-//         max-width: 0rem;
-//         min-width: 13rem;
-     
-//     }
-//   }
-
-//   &__upload-icon {
-//     position: absolute;
-//     left: 1rem;
-//     top: 50%;
-//     transform: translateY(-50%);
-//   }
-
-//   &__search-container, &__thumbnail-wrap {
-//     display: flex;
-//     flex-direction: column;
-//     margin: 1rem 0;
-//     flex-grow: 1;
-//   }
-
-//   #uploads-box, #uploads-box-2 {
-//     padding-left: 30px;
-//     border: 1px solid $second3;
-//     border-radius: 4px;
-//     width: 100%;
-//     margin-right: 10px;
-//     padding: 1rem;
-//     padding-left: 3rem;
-//     background-size: 15px;
-//   }
-
-//   &__thumbnail {
-//     width: 100%;
-//     height: auto;
-//     border-radius: 4px;
-//   }
-
-//   &__cancel-link, &__cancel-btn {
-//     display: block;
-//     margin-top: 2rem;
-//     color: $primary2;
-//     text-align: center;
-//     text-decoration: none;
-//     font-weight: 600;
-//     margin-bottom: 4rem;
-
-
-//     @include tablet {
-//         margin-bottom: 0;
-//     }
-//   }
-
-//   &__btn-wrap {
-//     width: 100%;
-//     display: flex;
-//     justify-content: flex-start;
-//     flex-direction: column;
-//   }
-
-//   &__sub-title {
-//     color: $primary3;
-//   }
-
-//   &:focus {
-//     border-color: $primary2;
-//     outline: none;
-//   }
-
-//   @include tablet {
-//     border-top: none;
-//     padding: 0 2.25rem;
-  
-
-//     &__thumbnail {
-//       width: 50%;  
-
-//       @include desktop {
-//         width: 100%;
-//       }
-//     }
-
-//     &__cancel-link, &__cancel-btn {
-//       display: flex;
-//       color: #0095FF;
-//       align-items: center;  
-//       margin-top: 0;
-//     }
-
-//     &__btn-wrap {
-//       flex-direction: row-reverse;
-//       margin-left: auto;
-//       padding-bottom: 2rem;
-//     }
-
-//     &__title-wrap {
-//       border-bottom: 1px solid $second3;
-//     }
-
-//     &__thumbnail-wrap {
-//       margin-top: 2rem;
-     
-//     }
-//   }
-
-//   &__cancel-text {
-//    @include tablet {
-//     margin: 0 4rem 0 0;
-//    }
-// }
-
-
-// &__search-container {
-// @include tablet {
-//     border-bottom: 1px solid #E1E1E1;
-//     padding: 0 0 2rem 0; 
-// }
-
-// @include desktop{
-//     border-bottom: none;
-//     padding: 0 0 2rem 0; 
-// }
-
-// }
-
-// &__links {
-// @include desktop {
-//     display: flex;
-//     border-bottom: 1px solid #E1E1E1;
-// }
-// }
-
-// &__search-container {
-//     width: 100%;  
-//     display: flex;
-//     flex-direction: column;
-  
-//     &__sub-title, 
-//     #uploads-box {
-//       width: 100%; 
-//     }
-  
-
-//   }
-
-
-// }
-
-
-
-// #upload-box:focus {
-//     border-color: $primary2;
-//     outline: none;
-//   }
-  
-//   #upload-box {
-//     background-color: $second4;
-//   } 
-
 @use "./../../../src/styles/partials/global" as *;
 @use "./../../../src/styles/partials/mixins" as *;
 @use "./../../../src/styles/partials/variables" as *;
@@ -231,19 +23,17 @@
     border-top: none;
     padding: 0 4rem;
     width: 88%;
-
   }
 
-
-
-  &__links, &__links--right {
+  &__links,
+  &__links--right {
     align-items: center;
     width: 100%;
     gap: 30px;
 
     @include desktop {
       display: flex;
-      border-bottom: 1px solid #E1E1E1;
+      border-bottom: 1px solid #e1e1e1;
     }
   }
 
@@ -286,14 +76,15 @@
     transform: translateY(-50%);
   }
 
-  &__search-container, &__thumbnail-wrap {
+  &__search-container,
+  &__thumbnail-wrap {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
     flex-grow: 1;
 
     @include tablet {
-      border-bottom: 1px solid #E1E1E1;
+      border-bottom: 1px solid #e1e1e1;
       padding: 0 0 2rem 0;
     }
 
@@ -302,7 +93,8 @@
     }
   }
 
-  #uploads-box, #uploads-box-2 {
+  #uploads-box,
+  #uploads-box-2 {
     padding-left: 30px;
     border: 1px solid $second3;
     border-radius: 4px;
@@ -327,7 +119,8 @@
     }
   }
 
-  &__cancel-link, &__cancel-btn {
+  &__cancel-link,
+  &__cancel-btn {
     display: block;
     margin-top: 2rem;
     color: $primary2;
@@ -338,8 +131,8 @@
 
     @include tablet {
       display: flex;
-      color: #0095FF;
-      align-items: center;  
+      color: #0095ff;
+      align-items: center;
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -355,6 +148,10 @@
       flex-direction: row-reverse;
       margin-left: auto;
       padding-bottom: 2rem;
+    }
+
+    @include desktop {
+      padding-top: 2rem;
     }
   }
 
@@ -374,16 +171,39 @@
   }
 
   &__search-container {
-    width: 100%;  
+    width: 100%;
     display: flex;
     flex-direction: column;
-  
-    &__sub-title, 
+
+    &__sub-title,
     #uploads-box {
-      width: 100%; 
+      width: 100%;
     }
   }
 
+  &__title-wrap {
+    @include desktop {
+      border-bottom: 1px solid #e1e1e1;
+    }
+  }
+
+  &__thumbnail-wrap {
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__publish-btn {
+    @include tablet {
+      min-width: 20%;
+      max-width: 20%;
+    }
+
+    @include desktop {
+      min-width: 16%;
+      max-width: 16%;
+    }
+  }
 }
 
 #uploads-box:focus {
