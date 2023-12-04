@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Uploads from "./pages/Uploads";
+import Uploads from "./pages/Uploads/Uploads";
 import Header from "./components/Header/Header";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "./App.scss";
