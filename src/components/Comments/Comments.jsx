@@ -1,20 +1,39 @@
+import { useState } from 'react';
+import axios from 'axios';
 import "./Comments.scss";
-import FormatDate from "../../utils";
+import FormatDate from "./../../utils";
 
 export default function Comments({ videoData }) {
-  // Check if videoData is available and has the comments property
-  if (!videoData || !videoData.comments) {
-    return <div>Loading comments or no comments available...</div>;
-  }
+  const [comments, setComments] = useState(videoData.comments || []);
+  const [newComment, setNewComment] = useState('');
 
-  const { comments, timestamp } = videoData;
+  const handleCommentChange = (event) => {
+    setNewComment(event.target.value);
+  };
+
+  const handleCommentSubmit = async (event) => {
+    event.preventDefault();
+    if (!newComment.trim()) return; // Ignore empty submissions
+
+    try {
+      const response = await axios.post(`http://localhost:8080/videos/${videoData.id}/comments`, {
+        name: "Anonymous", // or the name of the user if you have user authentication
+        comment: newComment,
+      });
+
+      setComments([...comments, response.data]);
+      setNewComment(''); // Clear the input field after successful submission
+    } catch (error) {
+      console.error('Error posting comment:', error);
+    }
+  };
 
   return (
     <section className="comments-section">
       <h3>{comments.length} Comments</h3>
 
       <section>
-        <form id="commentForm" className="comments">
+        <form id="commentForm" className="comments" onSubmit={handleCommentSubmit}>
           <div className="comments__wrap">
             <div className="comments__avatar-wrap">
               <img
@@ -36,6 +55,8 @@ export default function Comments({ videoData }) {
                     className="comments__commentArea"
                     name="comment"
                     placeholder="Add a new comment"
+                    value={newComment}
+                    onChange={handleCommentChange}
                   ></textarea>
                 </div>
                 <div className="comments__submit-wrap">
@@ -61,7 +82,7 @@ export default function Comments({ videoData }) {
                   <div className="comments-area__data-wrap">
                     <h3 className="comments-area__title">{comment.name}</h3>
                     <p className="comments-area__data">
-                      {FormatDate(timestamp)}
+                      {FormatDate(comment.timestamp)}
                     </p>
                   </div>
                   <div className="comments-area__comments">
