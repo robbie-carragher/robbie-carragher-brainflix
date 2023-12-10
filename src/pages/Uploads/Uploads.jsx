@@ -1,16 +1,32 @@
-import "./Uploads.scss";
-import "./../../styles/partials/_global.scss";
+
+import  { useState } from 'react';
+import axios from 'axios';
 import { Link, useNavigate } from "react-router-dom";
+import "./Uploads.scss";
 
 export default function Uploads() {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+ 
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    alert("Upload successful!");
-
-    navigate("/");
+    try {
+      await axios.post('http://localhost:8080/videos', {
+        title: title,
+        channel: 'Channel', 
+        description: description
+      });
+console.log(title)
+console.log(description)
+      alert("Upload successful!");
+      navigate("/");
+    } catch (error) {
+      console.error("Error posting new video:", error);
+      alert("Error uploading video");
+    }
   };
 
   return (
@@ -33,33 +49,28 @@ export default function Uploads() {
           <div className="uploads__search-container">
             <h2 className="uploads__sub-title">TITLE YOUR VIDEO</h2>
             <input
-              id="uploads-box"
               type="text"
-              name="name"
+              name="title"
               placeholder="Add a title to your video"
               required
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
+            
             <h2 className="uploads__sub-title">ADD A VIDEO DESCRIPTION</h2>
             <textarea
-              id="uploads-box"
-              name="comment"
+              name="description"
               placeholder="Add a description to your video"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             ></textarea>
+          
           </div>
         </div>
 
         <div className="uploads__btn-wrap">
-          <button type="submit" className="uploads__publish-btn">
-            <img
-              src="/src/assets/images/Icons/publish.svg"
-              alt="Upload Icon"
-              className="uploads__upload-icon"
-            />
-            <span className="uploads__btn-text">PUBLISH</span>
-          </button>
-          <Link to="/" className="uploads__cancel-link">
-            <span className="uploads__cancel-text">CANCEL</span>
-          </Link>
+          <button type="submit" className="uploads__publish-btn">PUBLISH</button>
+          <Link to="/" className="uploads__cancel-link">CANCEL</Link>
         </div>
       </form>
     </section>
