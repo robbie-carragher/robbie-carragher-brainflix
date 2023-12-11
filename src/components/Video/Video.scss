@@ -37,5 +37,25 @@
       object-fit: cover;
     }
   }
+
+  &__likes-wrap {
+    padding: 0 0 1rem 2rem; 
+  }
+
+  &__likes-btn {
+    background-color: $primary2;
+    color:$primary4;
+  }
+
+  &__likes-btn:hover {
+    background-color:$second2;
+
+  }
+
+  &__likes {
+    color:$primary4;
+    margin: 0 0 0 1rem;
+  }
+
 }
 

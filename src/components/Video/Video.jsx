@@ -40,7 +40,7 @@ export default function VideoComponent({ videosData, selectedVideoData }) {
           controls
           poster={videoToShow.image}
         ></video>
-        <div>
+        <div className="video-section__likes-wrap">
           <button onClick={handleLike} className="video-section__likes-btn">
             Like
           </button>
