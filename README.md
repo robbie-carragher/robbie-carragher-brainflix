@@ -23,7 +23,7 @@ Currently, two official plugins are available:
 
 <h3> 📷 Preview </h3> <hr/>
 
-<img src="https://i.ibb.co/bJtVyg7/Brainflix-Screenshot.png" alt="Brainflix-Screenshot" border="0">
+<img src="https://i.ibb.co/xhmWTTg/Brainflix-landing-page.png" alt="Brainflix-landing-page" border="0">
 <br><br>
 <img src="https://i.ibb.co/KzmvkS7/Brainflix-upload.png" alt="Brainflix-upload" border="0">
 
