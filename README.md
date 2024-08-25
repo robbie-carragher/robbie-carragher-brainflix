@@ -19,7 +19,8 @@ Currently, two official plugins are available:
 
 <p>npm run dev</p>
 
-<a href="[https://github.com/robbie-carragher/robbie-carragher-brainflix](https://github.com/robbie-carragher/robbie-carragher-brainflix)"> Frontend Github Source </a>
+[Frontend Github Source](https://github.com/robbie-carragher/robbie-carragher-brainflix/edit/main/README.md#start-client)
+
 
 <h3> 📷 Preview </h3> <hr/>
 
@@ -31,7 +32,8 @@ Currently, two official plugins are available:
 
 <p>npm start</p>
 
-<a href="[https://github.com/robbie-carragher/BrainFlix-Server](https://github.com/robbie-carragher/BrainFlix-Server)"> Backend Github Source </a>
+[BrainFlix Server](https://github.com/robbie-carragher/BrainFlix-Server)
+
 
 <h3> 📝 Platforms & Languages </h3> <hr/>
 
@@ -39,7 +41,6 @@ Currently, two official plugins are available:
 
 ![https://img.shields.io/badge/SCSS-CC6699.svg?&style=for-the-badge&logo=SASS&logoColor=white](https://img.shields.io/badge/SCSS-CC6699.svg?&style=for-the-badge&logo=SASS&logoColor=white)
 
-![https://img.shields.io/badge/MySQL-4479A1.svg?&style=for-the-badge&logo=MySQL&logoColor=white](https://img.shields.io/badge/MySQL-4479A1.svg?&style=for-the-badge&logo=MySQL&logoColor=white)
 
 ![https://img.shields.io/badge/Nodejs-339933.svg?&style=for-the-badge&logo=node&logoColor=white](https://img.shields.io/badge/Nodejs-339933.svg?&style=for-the-badge&logo=node&logoColor=white)
 
