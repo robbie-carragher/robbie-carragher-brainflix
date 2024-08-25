@@ -29,8 +29,8 @@ Frontend Github Source
 <h3> 📷 Preview </h3>
 <hr/>
 
-<img src="https://i.ibb.co/Gcb29HP/Clean-Shot-2024-01-16-at-13-11-47-2x.png" alt="Clean-Shot-2024-01-16-at-13-11-47-2x" border="0"></a><br />
-<img src="https://s13.gifyu.com/images/S0cYn.gif" alt="CleanShot 2024 01 16 at 13.12.22" border="0" />
+<img src="https://imgur.com/a/ClXHPrX" alt="Brainflix landing" border="0"></a><br />
+<img src="[https://s13.gifyu.com/images/S0cYn.gif](https://imgur.com/a/zwqDOAR)" alt="upload" border="0" />
 
 <h2>Start Server</h2>
 
