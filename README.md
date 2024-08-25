@@ -15,8 +15,13 @@ Currently, two official plugins are available:
 <hr/>
 <p>I am an experienced Web Site Developer based in Nelson, BC, Canada. I love combining the worlds of logic and creative websites to make eye-catching, accessible, and user-friendly web and applications. My interest in development started in 2019 and in 2019 when I studied full-stack web development at Selkirk College and continued my education by attending software engineering at BrainStation. I have a serious passion for coding and dynamic user experience. </p>
 
-<h3> ❤️ BrainFlix Video Platform </h3>
+<h3> ❤️ InStock - Warehouse & Inventory Management System </h3>
 <hr/>
+
+<h6> Member</h6>
+<ul>
+<li>robbie-carragher</li>
+</ul>
 
 <h2>Start Client</h2>
 
@@ -29,8 +34,8 @@ Frontend Github Source
 <h3> 📷 Preview </h3>
 <hr/>
 
-<img src="https://imgur.com/a/ClXHPrX" alt="Brainflix landing" border="0"></a><br />
-<img src="[https://s13.gifyu.com/images/S0cYn.gif](https://imgur.com/a/zwqDOAR)" alt="upload" border="0" />
+<img src="https://i.ibb.co/Gcb29HP/Clean-Shot-2024-01-16-at-13-11-47-2x.png" alt="Clean-Shot-2024-01-16-at-13-11-47-2x" border="0"></a><br />
+<img src="https://s13.gifyu.com/images/S0cYn.gif" alt="CleanShot 2024 01 16 at 13.12.22" border="0" />
 
 <h2>Start Server</h2>
 
