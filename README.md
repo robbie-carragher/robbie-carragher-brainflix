@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 ![Hello World!](https://capsule-render.vercel.app/api?type=cylinder&color=0:4287f5,100:a6c0fe&text=Hello%20World!&fontAlignY=45&fontSize=40&height=120&animation=blinking&desc=My%20name%20is%20Robbie&descAlignY=70&descAlign=50&fontColor=ffffff&descPadding=20)
 
-<h3> 👋 Introduction </h3> <hr/> <p>I am an experienced Web Site Developer based in Nelson, BC, Canada. I love combining the worlds of logic and creative websites to make eye-catching, accessible, and user-friendly web and applications. My interest in development started in 2019 and in 2019 when I studied full-stack web development at Selkirk College and continued my education by attending software engineering at BrainStation. I have a serious passion for coding and dynamic user experience. </p>
+<h3> 👋 Introduction </h3> <hr/> <p>I am an experienced Web Site Developer based in Nelson, BC, Canada. I love combining the worlds of logic and creative websites to make eye-catching, accessible, and user-friendly web and applications. My interest in development started in 2018 and 2019 when I studied full-stack web development at Selkirk College and continued my education by attending software engineering at BrainStation. I have a serious passion for coding and dynamic user experience. </p>
 
 <h3> ❤️ BrainFlix Video Platform</h3> <hr/>
 
